@@ -105,8 +105,13 @@ h2 {
 .wrapper {
   min-height: 100%;
   display: grid;
-  grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
+  grid-template: minmax(100px, auto) 1fr minmax(50px, auto)/1fr;
   grid-template-areas: "header" "main" "footer";
+}
+@media (mix-width: 659px) {
+  .wrapper {
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
+  }
 }
 
 .header {
@@ -163,6 +168,7 @@ h2 {
 .header__avatar {
   display: grid;
   justify-items: end;
+  align-items: center;
 }
 .header__avatar-body {
   position: relative;
@@ -186,7 +192,6 @@ h2 {
     -ms-grid-column: 1;
     grid-area: main;
     display: grid;
-    grid-auto-flow: column;
     grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
   }
 }
@@ -345,8 +350,8 @@ h2 {
 .footer {
   background-color: #c26e7c;
   display: grid;
-  align-items: center;
   text-align: center;
+  align-items: center;
 }
 .footer__copy {
   order: 2;
